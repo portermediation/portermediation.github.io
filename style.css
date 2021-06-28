@@ -95,7 +95,7 @@ label {
     margin: 0 auto;
     border-radius: .1em;
     padding: 1em;
-    max-width: 750px;
+    max-width: 100%;
     box-shadow: 0 0 1em .0002em rgb(18, 18, 18, 0.5);
 }
 
@@ -148,6 +148,11 @@ html {
     background-image: url('./assets/img/skyline.jpg');
 }
 
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .chunk-content {
     margin: .5em;
     padding: 1em 1em;
@@ -173,5 +178,15 @@ html {
     }
     .chunk-content {
         width: 100%;
+    }
+
+    body {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 1em;
+    }
+
+    .calendar {
+        height: 500px;
     }
 }

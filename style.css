@@ -1,0 +1,163 @@
+input[type="text"], input[type="date"], input[type="email"], input[type="tel"], input[type="time"], textarea, select {
+    font-family: inherit;
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    width: 90%;
+    color: inherit;
+    margin-bottom: .5em;
+    display: block;
+}
+
+select {
+    width: 95%;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="date"], input[type="time"] {
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-bottom: .5em;
+}
+
+.abutton {
+    color: #FFF;
+    background-color: lightskyblue;
+    border: none;
+    font-size: 18pt;
+    text-align: center;
+    border-radius: .25em;
+    width: 100%;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.abutton:hover {
+    background-color: rgb(93, 191, 252);
+    cursor: pointer;
+}
+
+.abutton:active {
+    box-shadow: 0 0px grey;
+}
+
+.bbutton {
+    width: max-content;
+    font-size: medium;
+    padding: none;
+    float: right;
+    color: lightslategray;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    border-radius: .25em;
+    text-decoration: none;
+}
+
+.bbutton:hover {
+    cursor: pointer;
+    background-color: rgb(177, 177, 177);
+    color: white;
+}
+
+.bbutton:active {
+    box-shadow: 0 0px grey;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+}
+
+.modal-content {
+    background-color: rgb(244, 247, 248, 0.95);
+    margin: 0 auto;
+    border-radius: .1em;
+    padding: 1em;
+    max-width: 750px;
+    box-shadow: 0 0 1em .0002em rgb(18, 18, 18, 0.5);
+}
+
+ul {
+    list-style-type: none;
+    margin: bottom .5em;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    border-bottom: lightgray;
+}
+
+li {
+    float: left;
+}
+
+a {
+    color: black;
+    border-radius: .25em;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    margin-right: .25em;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.name a {
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgba(53, 182, 224, 0.75);
+}
+
+.active-link {
+    background-color: rgba(51, 172, 212, 0.75);
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    font-family: Lato, sans-serif;
+}
+
+html {
+    background-image: url('./assets/img/skyline.jpg');
+}
+
+.chunk-content {
+    margin: .5em;
+    padding: 1em 1em;
+    background: rgb(244, 247, 248, 0.95);
+    border-radius: .25em;
+}
+
+.chunk-content-child {
+    margin: .1em;
+    padding: 1em 1em;
+    float: left;
+    width: 60%;
+}

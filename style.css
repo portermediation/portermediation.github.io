@@ -94,8 +94,8 @@ label {
     background-color: rgb(244, 247, 248, 0.95);
     margin: 0 auto;
     border-radius: .1em;
+    max-width: 750px;
     padding: 1em;
-    max-width: 100%;
     box-shadow: 0 0 1em .0002em rgb(18, 18, 18, 0.5);
 }
 
@@ -188,5 +188,12 @@ body {
 
     .calendar {
         height: 500px;
+    }
+
+    .modal {
+        max-width: 450px;
+    }
+    .modal-content { 
+        max-width: 300px;
     }
 }

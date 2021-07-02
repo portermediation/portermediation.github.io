@@ -11,7 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
+    <script>
 
+        console.log("this is working");
+
+        document.addEventListener('input', (event) => {
+            if (event.target.id !== 'mediation-location') return;
+
+            const location_div = document.getElementById('in-person-location-div');
+            console.log(event.target.value);
+            if (event.target.value === "in-person") {
+                console.log(location_div.style.display);
+                location_div.style.display = "block";
+                console.log(location_div.style.display);
+            } else {
+                location_div.style.display = "none";
+            }
+        });
+        console.log("event handler registed");
+
+    </script>
     <title>David W. Porter, J.D.</title>
 </head>
 
@@ -36,7 +55,8 @@
             <div class="modal-content" style="margin: 15% auto;">
                 <button class="bbutton" onclick="toggleCollapsed('error-modal')">X</button>
                 <h3 style="text-align: center;">There was a problem submitting your form. If the issue continues, please
-                <a href="mailto:portermediation@gmail.com">contact me</a> directly.</h3>
+                    <a href="mailto:portermediation@gmail.com">contact me</a> directly.
+                </h3>
             </div>
         </div>
 
@@ -45,13 +65,17 @@
                 <button class="bbutton" onclick="toggleCollapsed('bookModal')">X</button>
                 <form id="booking-form">
                     <h1>Schedule a mediation:</h1>
-                    <p class="label">Choose session type:</p>
-                    <input type="radio" id="virtual_session" name="session_type" value="virtual">
-                    <label style="display: inline-block;" for="virtual_session">Virtual</label>
-                    <input type="radio" id="in_person_session" name="session_type" value="in_person">
-                    <label style="display: inline-block;" for="in_person_session">In person</label>  
-                
-                    <br>
+
+                    <label for="mediation-location">Mediation location:</label>
+                    <select name="mediation-location" id="mediation-location" required>
+                        <option value="virtual">Virtual</option>
+                        <option value="in-person">In person</option>
+                    </select>
+
+                    <span id="in-person-location-div" class="in-person-location-div">
+                        <label for="in-person-location">Desired mediation location:</label>
+                        <input type="text" name="in-person-location" id="in-person-location">
+                    </span>
 
                     <label for="date-requested">Date Requested:</label>
                     <input type="date" id="date-requested" name="date-requested" required>
@@ -161,7 +185,6 @@
 
                     <button class="abutton">Submit</button>
                 </form>
-
                 <script>
                     var form = document.getElementById("booking-form");
                     async function handleSubmit(event) {
@@ -183,7 +206,7 @@
                             toggleCollapsed('error-modal')
                         });
                     }
-                    form.addEventListener("submit", handleSubmit)
+                    form.addEventListener("submit", handleSubmit);
                 </script>
             </div>
         </div>
@@ -213,7 +236,9 @@
             </div>
 
             <div class="chunk-content calendar">
-                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=cG9ydGVybWVkaWF0aW9uQGdtYWlsLmNvbQ&amp;color=%23039BE5&amp;showNav=1&amp;showTitle=0&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0" style="border:solid 1px #777" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+                <iframe
+                    src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=cG9ydGVybWVkaWF0aW9uQGdtYWlsLmNvbQ&amp;color=%23039BE5&amp;showNav=1&amp;showTitle=0&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0"
+                    style="border:solid 1px #777" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
             </div>
         </div>
     </div>

@@ -73,6 +73,10 @@ label {
     box-shadow: 0 0px grey;
 }
 
+.in-person-location-div {
+    display: none;
+}
+
 .modal {
     display: none;
     /* Hidden by default */

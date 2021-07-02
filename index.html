@@ -45,6 +45,14 @@
                 <button class="bbutton" onclick="toggleCollapsed('bookModal')">X</button>
                 <form id="booking-form">
                     <h1>Schedule a mediation:</h1>
+                    <p class="label">Choose session type:</p>
+                    <input type="radio" id="virtual_session" name="session_type" value="virtual">
+                    <label style="display: inline-block;" for="virtual_session">Virtual</label>
+                    <input type="radio" id="in_person_session" name="session_type" value="in_person">
+                    <label style="display: inline-block;" for="in_person_session">In person</label>  
+                
+                    <br>
+
                     <label for="date-requested">Date Requested:</label>
                     <input type="date" id="date-requested" name="date-requested" required>
 
@@ -149,7 +157,7 @@
                     <label for="case-name">Name of case:</label>
                     <input type="text" id="case-name" name="case-name" required>
 
-                    <br><br>
+                    <br>
 
                     <button class="abutton">Submit</button>
                 </form>

@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,30 +10,8 @@
     property, homeowner’s associations, contracts, and collections.">
 
     <link rel="icon" type="image/jpeg" href="./assets/img/favicon.jpg">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
-    <script>
-
-        console.log("this is working");
-
-        document.addEventListener('input', (event) => {
-            if (event.target.id !== 'mediation-location') return;
-
-            const location_div = document.getElementById('in-person-location-div');
-            console.log(event.target.value);
-            if (event.target.value === "in-person") {
-                console.log(location_div.style.display);
-                location_div.style.display = "block";
-                console.log(location_div.style.display);
-            } else {
-                location_div.style.display = "none";
-            }
-        });
-        console.log("event handler registed");
-
-    </script>
     <title>David W. Porter, J.D.</title>
 </head>
 
@@ -211,6 +188,15 @@
                         });
                     }
                     form.addEventListener("submit", handleSubmit);
+
+                    document.getElementById('mediation-location').addEventListener('input', (event) => {
+                        const location_div = document.getElementById('in-person-location-div');
+                        if (event.target.value === "in-person") {
+                            location_div.style.display = "block";
+                        } else {
+                            location_div.style.display = "none";
+                        }
+                    });
                 </script>
             </div>
         </div>
